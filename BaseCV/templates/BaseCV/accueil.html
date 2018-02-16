@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block custom_css %} <link href="{% static 'BaseCV/css/custom_accueil.css' %}"  rel="stylesheet"> {% endblock %}
+
+{% block custom_active %}
+              <li class="active"><a href="/">Accueil</a></li>
+              <li><a href="/RechercheCV/">Recherche CV</a></li>
+              <li><a href="#contact"><span class="glyphicon glyphicon-log-in"></span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/RechercheCV/upload/">Upload CV</a></li>
+                  <li><a href="/RechercheCV/delete/">Delete CV</a></li>
+                  <li><a href="/BaseCV/list_CV/">Base CV globale</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+{% endblock %}
+
+{% block content %}
+            <div class="col-xs-6 col-lg-4">
+              <h2>BU1 : Data Science</h2>
+              <p>Pour faire des données un levier de création de valeur,Velvet s’est engagé,dans la maîtrise et l’exploitation profonde de la donnée. Ainsi la connaissance et l’anticipation des attentes clients permettent d’optimiser l’expérience client et de détecter et créer de nouvelles opportunités business; </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>BU2: EMA</h2>
+              <p>A COMPLETER</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>BU3: CRM</h2>
+              <p>A COMPLETER</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>BU4: BC</h2>
+              <p>Le but est de bâtir l’expérience client omnicanal, de booster la croissance digitale, d’ancrer l’excellence opérationnelle et d’anticiper les pratiques de demain.Les consultants Business Consulting co-construisent les offres et services et co-déﬁnissent la stratégie client ﬁdélisante. Ces derniers, architectes de la transformation client, catalysent les projets en s’appuyant sur l’ensemble des expertises de Velvet Data Science, Digital Factory et Smart Technology;  </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>BU5: Digital Factory</h2>
+              <p> Leur objectif est d’accélérer et orchestrer le développement digital avec une vision client omnicanal uniﬁée magasin-mobile-site internet et une réconciliation des mondes CRM-digital-mobile. De plus, il propose des scénarii à temps réel comme des activations de campagnes et une amélioration continue des performances campagnes; </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>BU6: Support</h2>
+              <p>A COMPLETER</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+{% endblock %}

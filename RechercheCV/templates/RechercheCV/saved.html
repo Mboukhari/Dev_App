@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block custom_css %} <link href="{% static 'RechercheCV/css/custom_rechercheCV.css' %}"  rel="stylesheet"> {% endblock %}
+
+{% block custom_active %}
+              <li><a href="/">Accueil</a></li>
+              <li class="active"><a href="/RechercheCV/">Recherche CV</a></li>
+              <li><a href="#contact"><span class="glyphicon glyphicon-log-in"></span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/RechercheCV/upload/">Upload CV</a></li>
+                  <li><a href="/RechercheCV/delete/">Delete CV</a></li>
+                  <li><a href="/BaseCV/list_CV/">Base CV globale</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+
+{% endblock %}
+
+{% block content %}
+      {% if saved %}
+         <strong>Your CV was saved.</strong>
+      {% endif %}
+
+      {% if not saved %}
+         <strong>Your CV was not saved.</strong>
+      {% endif %}
+{% endblock %}
+
+

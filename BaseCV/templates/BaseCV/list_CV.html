@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block custom_css %} <link href="{% static 'BaseCV/css/custom_listCV.css' %}"  rel="stylesheet"> {% endblock %}
+
+
+{% block custom_active %}
+              <li><a href="/">Accueil</a></li>
+              <li><a href="/RechercheCV/">Recherche CV</a></li>
+              <li><a href="#contact"><span class="glyphicon glyphicon-log-in"></span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/RechercheCV/upload/">Upload CV</a></li>
+                  <li><a href="/RechercheCV/delete/">Delete CV</a></li>
+                  <li><a href="/BaseCV/list_CV/">Base CV globale</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+{% endblock %}
+
+{% block content %}
+    <div class="col-lg-offset-4 col-lg-6 col-lg-offset-2">
+        <div class="box">
+          <div class="container-4">
+            <input type="search" id="search" placeholder="Search..." />
+            <button class="icon"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+    </div>
+
+    <br>
+    <ui>
+        {% for CV in base_globale %}
+            <a href="/list_CV/display/?sku={{ CV.picture }}"><li>{{CV.name}}</li></a>
+        {% endfor %}
+    </ui>
+{% endblock %}
